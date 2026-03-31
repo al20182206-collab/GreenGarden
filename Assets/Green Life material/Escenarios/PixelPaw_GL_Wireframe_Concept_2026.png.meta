@@ -1,0 +1,507 @@
+fileFormatVersion: 2
+guid: ccfdd4e38eeafe744af7a1f85344564d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 366229756280937714
+    second: PixelPaw_GL_Wireframe_Concept_2026_0
+  - first:
+      213: -4541505792564203093
+    second: PixelPaw_GL_Wireframe_Concept_2026_1
+  - first:
+      213: -2029411728421876230
+    second: PixelPaw_GL_Wireframe_Concept_2026_2
+  - first:
+      213: 1084845817487724509
+    second: PixelPaw_GL_Wireframe_Concept_2026_3
+  - first:
+      213: -644166115164223723
+    second: PixelPaw_GL_Wireframe_Concept_2026_4
+  - first:
+      213: 5034955185530796919
+    second: PixelPaw_GL_Wireframe_Concept_2026_5
+  - first:
+      213: 4285245969743009823
+    second: PixelPaw_GL_Wireframe_Concept_2026_6
+  - first:
+      213: -4031821993524267044
+    second: PixelPaw_GL_Wireframe_Concept_2026_7
+  - first:
+      213: -2134597854918754728
+    second: PixelPaw_GL_Wireframe_Concept_2026_8
+  - first:
+      213: -6400555741634607841
+    second: PixelPaw_GL_Wireframe_Concept_2026_9
+  - first:
+      213: 7962685008681101866
+    second: PixelPaw_GL_Wireframe_Concept_2026_10
+  - first:
+      213: -1977290500029384250
+    second: PixelPaw_GL_Wireframe_Concept_2026_11
+  - first:
+      213: 4508731923351321725
+    second: PixelPaw_GL_Wireframe_Concept_2026_12
+  - first:
+      213: 5994753581685301154
+    second: PixelPaw_GL_Wireframe_Concept_2026_13
+  - first:
+      213: -3913963378611998055
+    second: PixelPaw_GL_Wireframe_Concept_2026_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PixelPaw_GL_Wireframe_Concept_2026_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 1047
+        width: 247
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fc9d41e50c151500800000000000000
+      internalID: 366229756280937714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPaw_GL_Wireframe_Concept_2026_1
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 1024
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba1f4d82b8459f0c0800000000000000
+      internalID: -4541505792564203093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPaw_GL_Wireframe_Concept_2026_2
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 1060
+        width: 103
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afd076809c416d3e0800000000000000
+      internalID: -2029411728421876230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPaw_GL_Wireframe_Concept_2026_3
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 942
+        width: 103
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddf8c63f5852e0f00800000000000000
+      internalID: 1084845817487724509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPaw_GL_Wireframe_Concept_2026_4
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 941
+        width: 103
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5170b49c4567f07f0800000000000000
+      internalID: -644166115164223723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPaw_GL_Wireframe_Concept_2026_5
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 834
+        width: 104
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77bf29d9011cfd540800000000000000
+      internalID: 5034955185530796919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPaw_GL_Wireframe_Concept_2026_6
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 833
+        width: 104
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f18d4b95180487b30800000000000000
+      internalID: 4285245969743009823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPaw_GL_Wireframe_Concept_2026_7
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 778
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd7f06622471c08c0800000000000000
+      internalID: -4031821993524267044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPaw_GL_Wireframe_Concept_2026_8
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 411
+        width: 28
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85eb14f7f826062e0800000000000000
+      internalID: -2134597854918754728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPaw_GL_Wireframe_Concept_2026_9
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 538
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1548cee678ac27a0800000000000000
+      internalID: -6400555741634607841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPaw_GL_Wireframe_Concept_2026_10
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 379
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2ae3c8c3d3218e60800000000000000
+      internalID: 7962685008681101866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPaw_GL_Wireframe_Concept_2026_11
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 19
+        width: 113
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c97eff24c04f84e0800000000000000
+      internalID: -1977290500029384250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPaw_GL_Wireframe_Concept_2026_12
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 19
+        width: 111
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7cb1d6cbcb329e30800000000000000
+      internalID: 4508731923351321725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPaw_GL_Wireframe_Concept_2026_13
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 19
+        width: 109
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2af5a58fe94a13350800000000000000
+      internalID: 5994753581685301154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPaw_GL_Wireframe_Concept_2026_14
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 19
+        width: 111
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 992b1f15b0fcea9c0800000000000000
+      internalID: -3913963378611998055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PixelPaw_GL_Wireframe_Concept_2026_0: 366229756280937714
+      PixelPaw_GL_Wireframe_Concept_2026_1: -4541505792564203093
+      PixelPaw_GL_Wireframe_Concept_2026_10: 7962685008681101866
+      PixelPaw_GL_Wireframe_Concept_2026_11: -1977290500029384250
+      PixelPaw_GL_Wireframe_Concept_2026_12: 4508731923351321725
+      PixelPaw_GL_Wireframe_Concept_2026_13: 5994753581685301154
+      PixelPaw_GL_Wireframe_Concept_2026_14: -3913963378611998055
+      PixelPaw_GL_Wireframe_Concept_2026_2: -2029411728421876230
+      PixelPaw_GL_Wireframe_Concept_2026_3: 1084845817487724509
+      PixelPaw_GL_Wireframe_Concept_2026_4: -644166115164223723
+      PixelPaw_GL_Wireframe_Concept_2026_5: 5034955185530796919
+      PixelPaw_GL_Wireframe_Concept_2026_6: 4285245969743009823
+      PixelPaw_GL_Wireframe_Concept_2026_7: -4031821993524267044
+      PixelPaw_GL_Wireframe_Concept_2026_8: -2134597854918754728
+      PixelPaw_GL_Wireframe_Concept_2026_9: -6400555741634607841
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
