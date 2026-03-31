@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e3c44ba6-8975-4cac-9061-eae7e5418728" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Escenas/Almacen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Escenas/Almacen.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Escenas/Exterior.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Escenas/Exterior.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Escenas/Huerto.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Escenas/Huerto.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Escenas/Oficina.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Escenas/Oficina.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="3BjGIaaDQnzbFABREj9vfiu8mOH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e3c44ba6-8975-4cac-9061-eae7e5418728" name="Changes" comment="" />
+      <created>1774994990772</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1774994990772</updated>
+      <workItem from="1774994990774" duration="25000" />
+    </task>
+    <servers />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityProjectDiscoverer">
+    <option name="unityProject" value="true" />
+    <option name="unityProjectFolder" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
