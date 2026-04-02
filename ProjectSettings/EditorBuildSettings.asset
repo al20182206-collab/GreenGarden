@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Escenas/Mapa de inicio.unity
+    path: Assets/Escenas/Mapa.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/Escenas/Almacen.unity
@@ -18,8 +18,11 @@ EditorBuildSettings:
     path: Assets/Escenas/Huerto.unity
     guid: bd1774d8e59da8d42a285e18e330a63c
   - enabled: 1
-    path: Assets/Escenas/Exterior.unity
+    path: Assets/Escenas/Nivel 1/Exterior.unity
     guid: 5d986b07e10f38b41ba4a7e547542deb
+  - enabled: 1
+    path: Assets/Escenas/UI Canvas wireframe/Escena_UI.unity
+    guid: 55719a8ade800ea459d4378eb17b2f54
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
