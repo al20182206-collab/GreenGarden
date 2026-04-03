@@ -1,41 +1,67 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
-public class InterfaceManager : MonoBehaviour
+public class PersistenciaUI : MonoBehaviour
 {
-    public GameObject uiPanel; 
-    private static InterfaceManager instancia;
+    [Header("Configuración")]
+    public string nombreDelPanel = "PanelMarco"; // Asegúrate de que tu objeto se llame así
+    public List<string> escenasSinUI = new List<string> { "Mapa", "Almacen" };
+
+    private static PersistenciaUI instancia;
+    private GameObject uiPanelMarco;
 
     void Awake()
     {
-        // Forzamos que se salga de cualquier carpeta/padre para que DontDestroy funcione
-        transform.SetParent(null); 
-
+        // 1. Singleton para que no se duplique
         if (instancia == null)
         {
             instancia = this;
+            transform.SetParent(null); 
             DontDestroyOnLoad(gameObject);
-            Debug.Log("SISTEMA: UI marcada para sobrevivir entre escenas.");
         }
         else
         {
-            Debug.Log("SISTEMA: Ya existe una UI, destruyendo duplicado.");
             Destroy(gameObject);
+            return;
+        }
+
+        // 2. Buscamos el panel la primera vez
+        BuscarPanel();
+    }
+
+    void OnEnable() { SceneManager.sceneLoaded += AlCargarEscena; }
+    void OnDisable() { SceneManager.sceneLoaded -= AlCargarEscena; }
+
+    void BuscarPanel()
+    {
+        // Buscamos el objeto por nombre dentro de los hijos del Canvas
+        if (uiPanelMarco == null)
+        {
+            Transform t = transform.Find(nombreDelPanel);
+            if (t != null) uiPanelMarco = t.gameObject;
         }
     }
 
-    void OnEnable() { SceneManager.sceneLoaded += OnSceneLoaded; }
-    void OnDisable() { SceneManager.sceneLoaded -= OnSceneLoaded; }
-
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    void AlCargarEscena(Scene escena, LoadSceneMode modo)
     {
-        if (uiPanel != null)
-        {
-            // ¡IMPORTANTE! Revisa que el nombre de la escena sea EXACTO
-            bool esMapa = (scene.name == "Mapa");
-            uiPanel.SetActive(!esMapa); 
+        // Siempre nos aseguramos de tener la referencia al despertar en escena nueva
+        BuscarPanel();
 
-            Debug.Log("Escena cargada: " + scene.name + " | UI Activa: " + !esMapa);
+        if (uiPanelMarco != null)
+        {
+            bool debeOcultarse = false;
+            foreach (string s in escenasSinUI)
+            {
+                if (escena.name.Trim().ToLower() == s.Trim().ToLower())
+                {
+                    debeOcultarse = true;
+                    break;
+                }
+            }
+
+            uiPanelMarco.SetActive(!debeOcultarse);
+            Debug.Log("Escena: " + escena.name + " | UI Activa: " + !debeOcultarse);
         }
     }
 }
