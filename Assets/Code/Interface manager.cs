@@ -3,29 +3,39 @@ using UnityEngine.SceneManagement;
 
 public class InterfaceManager : MonoBehaviour
 {
-    public GameObject uiPanel; // Arrastra aquí el objeto que tiene tu frame/marco
+    public GameObject uiPanel; 
+    private static InterfaceManager instancia;
 
-    void OnEnable()
+    void Awake()
     {
-        // Nos suscribimos al evento de cambio de escena
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        // Forzamos que se salga de cualquier carpeta/padre para que DontDestroy funcione
+        transform.SetParent(null); 
+
+        if (instancia == null)
+        {
+            instancia = this;
+            DontDestroyOnLoad(gameObject);
+            Debug.Log("SISTEMA: UI marcada para sobrevivir entre escenas.");
+        }
+        else
+        {
+            Debug.Log("SISTEMA: Ya existe una UI, destruyendo duplicado.");
+            Destroy(gameObject);
+        }
     }
 
-    void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
+    void OnEnable() { SceneManager.sceneLoaded += OnSceneLoaded; }
+    void OnDisable() { SceneManager.sceneLoaded -= OnSceneLoaded; }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Si la escena cargada es "Mapa", apagamos el Frame
-        if (scene.name == "Mapa") 
+        if (uiPanel != null)
         {
-            uiPanel.SetActive(false);
-        }
-        else 
-        {
-            uiPanel.SetActive(true);
+            // ¡IMPORTANTE! Revisa que el nombre de la escena sea EXACTO
+            bool esMapa = (scene.name == "Mapa");
+            uiPanel.SetActive(!esMapa); 
+
+            Debug.Log("Escena cargada: " + scene.name + " | UI Activa: " + !esMapa);
         }
     }
 }

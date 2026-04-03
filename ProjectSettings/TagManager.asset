@@ -51,5 +51,8 @@ TagManager:
   - name: Frente
     uniqueID: 2864279603
     locked: 0
+  - name: Canvas supremo
+    uniqueID: 2024574653
+    locked: 0
   m_RenderingLayers:
   - Default

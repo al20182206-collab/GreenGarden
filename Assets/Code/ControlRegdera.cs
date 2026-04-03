@@ -53,6 +53,14 @@ public class ControlRegadera : MonoBehaviour
                     if (moviendo) 
                     {
                         moviendo = false;
+                        if (pointer.press.wasReleasedThisFrame) 
+                        {
+                            moviendo = false;
+                            if(aguaVisual != null) aguaVisual.SetActive(false);
+                        
+                            // OPCIONAL: La regadera se apaga sola al soltarla
+                            gameObject.SetActive(false); 
+                        }
         
                         // CAMBIO: Desactivación segura del agua
                         if (aguaVisual != null) 
