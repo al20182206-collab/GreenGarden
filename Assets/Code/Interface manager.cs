@@ -5,15 +5,18 @@ using System.Collections.Generic;
 public class PersistenciaUI : MonoBehaviour
 {
     [Header("Configuración")]
-    public string nombreDelPanel = "PanelMarco"; // Asegúrate de que tu objeto se llame así
+    public string nombreDelPanel = "PanelMarco"; 
     public List<string> escenasSinUI = new List<string> { "Mapa", "Almacen" };
+
+    [Header("Ajustes de Planta (Global)")]
+    public float velocidadDescuidado = 1.5f;
 
     private static PersistenciaUI instancia;
     private GameObject uiPanelMarco;
 
     void Awake()
     {
-        // 1. Singleton para que no se duplique
+        // 1. Singleton para que no se duplique y sea eterno
         if (instancia == null)
         {
             instancia = this;
@@ -26,16 +29,29 @@ public class PersistenciaUI : MonoBehaviour
             return;
         }
 
-        // 2. Buscamos el panel la primera vez
         BuscarPanel();
     }
 
-    void OnEnable() { SceneManager.sceneLoaded += AlCargarEscena; }
+    // --- CORRECCIÓN CLAVE: El Update del Canvas ---
+    void Update()
+    {
+        // Mientras el juego esté corriendo (en cualquier escena),
+        // el Canvas restará la armonía del "Cerebro" global.
+        if (EstadoPlanta.armoniaActual > 0)
+        {
+            EstadoPlanta.armoniaActual -= velocidadDescuidado * Time.deltaTime;
+        }
+        else
+        {
+            EstadoPlanta.armoniaActual = 0;
+            EstadoPlanta.estaViva = false;
+        }
+    }
+void OnEnable() { SceneManager.sceneLoaded += AlCargarEscena; }
     void OnDisable() { SceneManager.sceneLoaded -= AlCargarEscena; }
 
     void BuscarPanel()
     {
-        // Buscamos el objeto por nombre dentro de los hijos del Canvas
         if (uiPanelMarco == null)
         {
             Transform t = transform.Find(nombreDelPanel);
@@ -45,7 +61,6 @@ public class PersistenciaUI : MonoBehaviour
 
     void AlCargarEscena(Scene escena, LoadSceneMode modo)
     {
-        // Siempre nos aseguramos de tener la referencia al despertar en escena nueva
         BuscarPanel();
 
         if (uiPanelMarco != null)
@@ -60,8 +75,9 @@ public class PersistenciaUI : MonoBehaviour
                 }
             }
 
+            // Esto solo oculta lo visual, pero el Update de arriba sigue bajando la armonía
             uiPanelMarco.SetActive(!debeOcultarse);
-            Debug.Log("Escena: " + escena.name + " | UI Activa: " + !debeOcultarse);
+            Debug.Log("Escena: " + escena.name + " | UI Activa: " + !debeOcultarse + " | Armonía Actual: " + EstadoPlanta.armoniaActual);
         }
     }
 }
