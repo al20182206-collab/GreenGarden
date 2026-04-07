@@ -116,4 +116,45 @@ void Update()
            }
        }
    }
+   
+   
+   // --- Agrega esto dentro de tu clase LogicaPlanta ---
+   
+   [Header("Ajustes de Reinicio")]
+   public float armoniaInicialAlReiniciar = 100f;
+   
+   // Detecta cuando la PALA entra en contacto
+   void OnTriggerEnter2D(Collider2D otro)
+   {
+       // Solo permitimos reiniciar si la planta ESTÁ MUERTA
+       if (otro.CompareTag("Pala") && !EstadoPlanta.estaViva)
+       {
+           ReiniciarTodo();
+       }
+   }
+   
+   void ReiniciarTodo()
+   {
+       Debug.Log("¡Pala usada! Reiniciando tierra...");
+   
+       // 1. Reiniciamos las variables LOCALES de esta planta
+       etapaActual = 0;
+       tiempoRecibiendoAgua = 0f;
+       armonia = armoniaInicialAlReiniciar;
+   
+       // 2. Actualizamos el SPRITE visual al frame inicial (tierra)
+       if (etapas.Length > 0)
+       {
+           render.sprite = etapas[0];
+           render.color = Color.white; // Quitamos el gris de muerta
+       }
+   
+       // 3. ¡IMPORTANTE! Actualizamos el CEREBRO GLOBAL (Canvas)
+       EstadoPlanta.armoniaActual = armoniaInicialAlReiniciar;
+       EstadoPlanta.progresoCrecimiento = 0f;
+       EstadoPlanta.estaViva = true; // ¡Vuelve a la vida!
+   
+       // Aquí podrías desactivar el objeto pala automáticamente si quieres
+       // otro.gameObject.SetActive(false); 
+   }
 }
