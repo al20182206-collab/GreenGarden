@@ -6,6 +6,7 @@ public class LogicaPlanta : MonoBehaviour
     public Sprite[] etapas; 
     public Slider barra;
     public float armonia = 50f; 
+    public Sprite spriteMuerta; // Arrastra aquí tu sprite de marchita
     private int etapaActual = 0;
     private float tiempoRecibiendoAgua = 0f; 
     private SpriteRenderer render;
@@ -56,25 +57,36 @@ public class LogicaPlanta : MonoBehaviour
 
 void Update() 
     {
-        // 2. La armonía baja por descuido
-        if (armonia > 0) {
-           armonia = EstadoPlanta.armoniaActual;
-        }
-
-        if (barra != null) barra.value = armonia;
-
-        // 3. Efecto visual de muerte/vida
-        if (armonia <= 0) {
-            render.color = Color.gray;
-            EstadoPlanta.estaViva = false;
-        } else {
-            render.color = Color.white;
-            EstadoPlanta.estaViva = true;
-        }
-
-        // 4. GUARDAR DATOS EN EL CEREBRO (Sincronización constante)
-        EstadoPlanta.armoniaActual = armonia;
-        EstadoPlanta.progresoCrecimiento = tiempoRecibiendoAgua;
+         // 1. Sincronizamos con el jefe (el Canvas)
+            armonia = EstadoPlanta.armoniaActual;
+        
+            if (barra != null) barra.value = armonia;
+        
+            // 2. Lógica de Muerte Visual
+            if (armonia <= 0) 
+            {
+                // Cambiamos al sprite de marchita si existe
+                if (spriteMuerta != null) {
+                    render.sprite = spriteMuerta;
+                }
+        
+                render.color = Color.gray; // Opcional: ponerla gris para más drama
+                EstadoPlanta.estaViva = false;
+            } 
+            else 
+            {
+                // Si está viva, recuperamos el color y el sprite que le toca por etapa
+                render.color = Color.white;
+                EstadoPlanta.estaViva = true;
+        
+                // Refrescamos el sprite según la etapa de crecimiento actual
+                if (etapas.Length > 0) {
+                    render.sprite = etapas[etapaActual];
+                }
+            }
+        
+            // 3. Guardamos progreso de crecimiento en el Cerebro
+            EstadoPlanta.progresoCrecimiento = tiempoRecibiendoAgua;
     }
 
    void OnTriggerStay2D(Collider2D otro) {

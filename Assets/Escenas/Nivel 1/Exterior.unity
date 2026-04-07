@@ -783,6 +783,7 @@ MonoBehaviour:
   - {fileID: 2619017600736033163, guid: 1504b896ad56e3746bdfe985896e0baa, type: 3}
   barra: {fileID: 16696797}
   armonia: 100
+  spriteMuerta: {fileID: -1971269103, guid: 1504b896ad56e3746bdfe985896e0baa, type: 3}
 --- !u!1 &1419815841
 GameObject:
   m_ObjectHideFlags: 0
