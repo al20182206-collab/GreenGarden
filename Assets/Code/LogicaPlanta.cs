@@ -1,160 +1,65 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LogicaPlanta : MonoBehaviour 
+public class LogicaPlantaUniversal : MonoBehaviour 
 {
+    [Header("Configuración de esta Planta")]
+    public int indicePlanta; // 0 para la primera, 1 para la segunda, 2 para la tercera
+
     public Sprite[] etapas; 
     public Slider barra;
-    public float armonia = 50f; 
-    public Sprite spriteMuerta; // Arrastra aquí tu sprite de marchita
-    private int etapaActual = 0;
-    private float tiempoRecibiendoAgua = 0f; 
+    public Sprite spriteMuerta;
+
     private SpriteRenderer render;
+    private int etapaActual = 0;
 
-    void Start() 
-    {
+    void Start() {
         render = GetComponent<SpriteRenderer>();
-        
-        // 1. Cargamos datos
-            armonia = EstadoPlanta.armoniaActual;
-            tiempoRecibiendoAgua = EstadoPlanta.progresoCrecimiento;
-        
-            // 2. EL TRUCO DEL TIEMPO:
-            float segundosAusente = EstadoPlanta.ObtenerTiempoTranscurrido();
-            // Bajamos 1.5 de armonía por cada segundo que no estuviste
-            armonia -= segundosAusente * 1.5f; 
-            armonia = Mathf.Clamp(armonia, 0, 100);
-        
-            // ... el resto de tu código de etapas ...
-     
-        
-        // Esto se ejecuta JUSTO cuando cambias de escena (cuando la planta desaparece)
-        
-       
-        // 1. SINCRONIZACIÓN AL ENTRAR (Cargar datos del Cerebro)
-        armonia = EstadoPlanta.armoniaActual;
-        tiempoRecibiendoAgua = EstadoPlanta.progresoCrecimiento;
 
-        // Recuperar la etapa visual basada en el tiempo acumulado
-        // (Calculamos en qué etapa debería estar según el tiempo que guardamos)
-        // Si cada etapa requiere 5 seg, dividimos el tiempo entre 5
-        etapaActual = Mathf.FloorToInt(tiempoRecibiendoAgua / 5f);
+        // Aplicar castigo por tiempo ausente
+        float segundos = EstadoPlanta.ObtenerTiempoTranscurrido();
+        EstadoPlanta.armonias[indicePlanta] -= segundos * 1.5f;
+
+        SincronizarVisual();
+    }
+
+    void Update() {
+        float armonia = EstadoPlanta.armonias[indicePlanta];
+        if (barra != null) barra.value = armonia;
+
+        if (armonia <= 0) {
+            if (spriteMuerta != null) render.sprite = spriteMuerta;
+            render.color = Color.gray;
+            EstadoPlanta.vivas[indicePlanta] = false;
+        } else {
+            render.color = Color.white;
+            EstadoPlanta.vivas[indicePlanta] = true;
+            SincronizarVisual();
+        }
+    }
+void SincronizarVisual() {
+        etapaActual = Mathf.FloorToInt(EstadoPlanta.progresos[indicePlanta] / 5f);
         etapaActual = Mathf.Clamp(etapaActual, 0, etapas.Length - 1);
-
-        if (etapas.Length > 0) render.sprite = etapas[etapaActual];
-
-        Debug.Log("Planta sincronizada: Armonía " + armonia + " | Etapa " + etapaActual);
-        
-         void OnDisable() 
-         {
-                    // Guardamos la hora actual para la próxima vez
-                    EstadoPlanta.ultimaVezVisto = System.DateTime.Now.ToString();
-                    // Aseguramos que el cerebro tenga el valor actualizado antes de irnos
-                    EstadoPlanta.armoniaActual = armonia;
-          }
-     
+        render.sprite = etapas[etapaActual];
     }
 
-void Update() 
-    {
-         // 1. Sincronizamos con el jefe (el Canvas)
-            armonia = EstadoPlanta.armoniaActual;
-        
-            if (barra != null) barra.value = armonia;
-        
-            // 2. Lógica de Muerte Visual
-            if (armonia <= 0) 
-            {
-                // Cambiamos al sprite de marchita si existe
-                if (spriteMuerta != null) {
-                    render.sprite = spriteMuerta;
-                }
-        
-                render.color = Color.gray; // Opcional: ponerla gris para más drama
-                EstadoPlanta.estaViva = false;
-            } 
-            else 
-            {
-                // Si está viva, recuperamos el color y el sprite que le toca por etapa
-                render.color = Color.white;
-                EstadoPlanta.estaViva = true;
-        
-                // Refrescamos el sprite según la etapa de crecimiento actual
-                if (etapas.Length > 0) {
-                    render.sprite = etapas[etapaActual];
-                }
+    void OnTriggerStay2D(Collider2D otro) {
+        if (otro.CompareTag("Agua") && EstadoPlanta.vivas[indicePlanta]) {
+            EstadoPlanta.armonias[indicePlanta] += 20f * Time.deltaTime;
+            EstadoPlanta.armonias[indicePlanta] = Mathf.Clamp(EstadoPlanta.armonias[indicePlanta], 0, 100);
+
+            if (EstadoPlanta.armonias[indicePlanta] > 60) {
+                EstadoPlanta.progresos[indicePlanta] += Time.deltaTime;
             }
-        
-            // 3. Guardamos progreso de crecimiento en el Cerebro
-            EstadoPlanta.progresoCrecimiento = tiempoRecibiendoAgua;
+        }
     }
 
-   void OnTriggerStay2D(Collider2D otro) {
-       // Si el agua toca la planta y el "Cerebro" dice que está viva
-       if (otro.CompareTag("Agua") && EstadoPlanta.estaViva) {
-   
-           // --- CAMBIO CLAVE ---
-           // No subimos "armonia", subimos directamente la del EstadoPlanta
-           EstadoPlanta.armoniaActual += 20f * Time.deltaTime; 
-   
-           // Limitamos para que no pase de 100
-           EstadoPlanta.armoniaActual = Mathf.Clamp(EstadoPlanta.armoniaActual, 0, 100);
-   
-           // Actualizamos nuestra variable local para que el resto del script funcione
-           armonia = EstadoPlanta.armoniaActual;
-   
-           // Lógica de crecimiento (la que ya tenías)
-           if (armonia > 60) {
-               tiempoRecibiendoAgua += Time.deltaTime;
-   
-               int nuevaEtapa = Mathf.FloorToInt(tiempoRecibiendoAgua / 5f);
-               if (nuevaEtapa > etapaActual && nuevaEtapa < etapas.Length) {
-                   etapaActual = nuevaEtapa;
-                   render.sprite = etapas[etapaActual];
-                   Debug.Log("¡Evolución!");
-               }
-           }
-       }
-   }
-   
-   
-   // --- Agrega esto dentro de tu clase LogicaPlanta ---
-   
-   [Header("Ajustes de Reinicio")]
-   public float armoniaInicialAlReiniciar = 100f;
-   
-   // Detecta cuando la PALA entra en contacto
-   void OnTriggerEnter2D(Collider2D otro)
-   {
-       // Solo permitimos reiniciar si la planta ESTÁ MUERTA
-       if (otro.CompareTag("Pala") && !EstadoPlanta.estaViva)
-       {
-           ReiniciarTodo();
-       }
-   }
-   
-   void ReiniciarTodo()
-   {
-       Debug.Log("¡Pala usada! Reiniciando tierra...");
-   
-       // 1. Reiniciamos las variables LOCALES de esta planta
-       etapaActual = 0;
-       tiempoRecibiendoAgua = 0f;
-       armonia = armoniaInicialAlReiniciar;
-   
-       // 2. Actualizamos el SPRITE visual al frame inicial (tierra)
-       if (etapas.Length > 0)
-       {
-           render.sprite = etapas[0];
-           render.color = Color.white; // Quitamos el gris de muerta
-       }
-   
-       // 3. ¡IMPORTANTE! Actualizamos el CEREBRO GLOBAL (Canvas)
-       EstadoPlanta.armoniaActual = armoniaInicialAlReiniciar;
-       EstadoPlanta.progresoCrecimiento = 0f;
-       EstadoPlanta.estaViva = true; // ¡Vuelve a la vida!
-   
-       // Aquí podrías desactivar el objeto pala automáticamente si quieres
-       // otro.gameObject.SetActive(false); 
-   }
+    // Lógica de la Pala
+    void OnTriggerEnter2D(Collider2D otro) {
+        if (otro.CompareTag("Pala") && !EstadoPlanta.vivas[indicePlanta]) {
+            EstadoPlanta.armonias[indicePlanta] = 100f;
+            EstadoPlanta.progresos[indicePlanta] = 0f;
+            EstadoPlanta.vivas[indicePlanta] = true;
+        }
+    }
 }

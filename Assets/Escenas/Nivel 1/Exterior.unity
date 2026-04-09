@@ -728,6 +728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3b7e9acd17820a45a29380a9e31ece7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LogicaPlanta
+  indicePlanta: 0
   etapas:
   - {fileID: 2745400022540436041, guid: f229c959ec16c1248b62e6b7cfa52627, type: 3}
   - {fileID: 8573125065416146900, guid: f229c959ec16c1248b62e6b7cfa52627, type: 3}
@@ -737,9 +738,7 @@ MonoBehaviour:
   - {fileID: 7209918678573379179, guid: 1504b896ad56e3746bdfe985896e0baa, type: 3}
   - {fileID: 2619017600736033163, guid: 1504b896ad56e3746bdfe985896e0baa, type: 3}
   barra: {fileID: 16696797}
-  armonia: 100
   spriteMuerta: {fileID: -1971269103, guid: 1504b896ad56e3746bdfe985896e0baa, type: 3}
-  armoniaInicialAlReiniciar: 100
 --- !u!1 &1419815841
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,6 +749,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1419815843}
   - component: {fileID: 1419815842}
+  - component: {fileID: 1419815844}
   m_Layer: 0
   m_Name: PixelPaw_GL_Jardin trasero_Concept_2026_0
   m_TagString: Untagged
@@ -806,7 +806,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -4271927994471771024, guid: f4e0bf15ae80e1543bf4e363dbdba19c, type: 3}
+  m_Sprite: {fileID: -7631955984598723643, guid: 740513bd495a4b74992811b8c35c7d13, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -824,13 +824,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1419815841}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2472439, y: 0.2472439, z: 0.2472439}
+  m_LocalScale: {x: 0.5227835, y: 0.5227835, z: 0.5227835}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1419815844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419815841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dd1ff5c13993b84b869d33677c0deae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ControladorFondo
+  imagenDia: {fileID: -7631955984598723643, guid: 740513bd495a4b74992811b8c35c7d13, type: 3}
+  imagenAtardecer: {fileID: -5818940521202941050, guid: b772c03d8a04fec479b045fb399443d9, type: 3}
+  imagenNoche: {fileID: 7726967693914894716, guid: 2994ecd3172d54f48a1bdba4e5af5c1c, type: 3}
 --- !u!1 &1594945883
 GameObject:
   m_ObjectHideFlags: 0

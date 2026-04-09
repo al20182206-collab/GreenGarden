@@ -3,19 +3,39 @@ using System;
 
 public class EstadoPlanta : MonoBehaviour
 {
-    // Al ser "static", estas variables son globales. 
-    // Si cambias de escena, el valor se queda guardado en la memoria.
-    public static float progresoCrecimiento = 0f;
-    public static float armoniaActual = 100f;
-    public static bool estaViva = true;
+    // Las nuevas listas para las 3 plantas
+    public static float[] armonias = { 100f, 100f, 100f };
+    public static float[] progresos = { 0f, 0f, 0f };
+    public static bool[] vivas = { true, true, true };
+
+    public static string ultimaVezVisto;
+
+    // --- "PUENTES" PARA EVITAR ERRORES ---
+    // Esto hace que si algo busca 'armoniaActual', use el espacio 0 del arreglo
+    public static float armoniaActual 
+    {
+        get { return armonias[0]; }
+        set { armonias[0] = value; }
+    }
+
+    public static float progresoCrecimiento 
+    {
+        get { return progresos[0]; }
+        set { progresos[0] = value; }
+    }
+
+    public static bool estaViva 
+    {
+        get { return vivas[0]; }
+        set { vivas[0] = value; }
+    }
+    // ---------------------------------------
 
     // Esto es para que puedas ver los valores en el Inspector (opcional)
     [Header("Visualización en tiempo real")]
     public float crecimientoDebug;
     public float armoniaDebug;
     
-    // ... tus variables de antes ...
-        public static string ultimaVezVisto; 
     
         // Agrega esto para calcular cuánto tiempo pasó
         public static float ObtenerTiempoTranscurrido()

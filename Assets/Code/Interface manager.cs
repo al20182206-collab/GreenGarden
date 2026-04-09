@@ -35,16 +35,17 @@ public class PersistenciaUI : MonoBehaviour
     // --- CORRECCIÓN CLAVE: El Update del Canvas ---
     void Update()
     {
-        // Mientras el juego esté corriendo (en cualquier escena),
-        // el Canvas restará la armonía del "Cerebro" global.
-        if (EstadoPlanta.armoniaActual > 0)
+        // Recorremos las 3 plantas
+        for (int i = 0; i < EstadoPlanta.armonias.Length; i++)
         {
-            EstadoPlanta.armoniaActual -= velocidadDescuidado * Time.deltaTime;
-        }
-        else
-        {
-            EstadoPlanta.armoniaActual = 0;
-            EstadoPlanta.estaViva = false;
+            if (EstadoPlanta.vivas[i] && EstadoPlanta.armonias[i] > 0)
+            {
+                EstadoPlanta.armonias[i] -= velocidadDescuidado * Time.deltaTime;
+            }
+            else if (EstadoPlanta.armonias[i] <= 0)
+            {
+                EstadoPlanta.vivas[i] = false;
+            }
         }
     }
 void OnEnable() { SceneManager.sceneLoaded += AlCargarEscena; }
