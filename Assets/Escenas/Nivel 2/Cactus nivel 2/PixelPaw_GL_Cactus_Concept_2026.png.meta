@@ -1,0 +1,360 @@
+fileFormatVersion: 2
+guid: 031de48982cc0f24091d6dbe32fa2c57
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2810343065800420905
+    second: PixelPaw_GL_Cactus_Concept_2026_0
+  - first:
+      213: -4123389708363787520
+    second: PixelPaw_GL_Cactus_Concept_2026_1
+  - first:
+      213: 6215336643207160768
+    second: PixelPaw_GL_Cactus_Concept_2026_2
+  - first:
+      213: -6296046776919121825
+    second: PixelPaw_GL_Cactus_Concept_2026_3
+  - first:
+      213: 3799394397977290289
+    second: PixelPaw_GL_Cactus_Concept_2026_4
+  - first:
+      213: 3363364945432666766
+    second: PixelPaw_GL_Cactus_Concept_2026_5
+  - first:
+      213: 7969247113063938768
+    second: PixelPaw_GL_Cactus_Concept_2026_6
+  - first:
+      213: 3276384105727194412
+    second: PixelPaw_GL_Cactus_Concept_2026_7
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PixelPaw_GL_Cactus_Concept_2026_0
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 1528
+        width: 906
+        height: 1348
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 433, y: 634}
+        - {x: 197, y: 674}
+        - {x: 37, y: 674}
+        - {x: -37, y: 452}
+        - {x: -141, y: 632}
+        - {x: -377, y: 634}
+        - {x: -453, y: 544}
+        - {x: -453, y: 432}
+        - {x: -431, y: 366}
+        - {x: -326, y: 274}
+        - {x: -453, y: 190}
+        - {x: -453, y: -368}
+        - {x: -337, y: -674}
+        - {x: 277, y: -674}
+        - {x: 277, y: -409}
+        - {x: 267, y: -133}
+        - {x: 293, y: 63}
+        - {x: 283, y: 307}
+        - {x: 453, y: 423}
+        - {x: 453, y: 594}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92e2406e028500720800000000000000
+      internalID: 2810343065800420905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPaw_GL_Cactus_Concept_2026_1
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 1543
+        width: 652
+        height: 1168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: 212, y: -445}
+        - {x: 234, y: -299}
+        - {x: 234, y: -134}
+        - {x: 226, y: -41}
+        - {x: 247, y: 107}
+        - {x: 246, y: 271}
+        - {x: 326, y: 354}
+        - {x: 326, y: 584}
+        - {x: 85, y: 584}
+        - {x: -68, y: 415}
+        - {x: -247, y: 391}
+        - {x: -326, y: 285}
+        - {x: -326, y: -500}
+        - {x: -274, y: -584}
+        - {x: 205, y: -584}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 003997a28e6c6c6c0800000000000000
+      internalID: -4123389708363787520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPaw_GL_Cactus_Concept_2026_2
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 1551
+        width: 551
+        height: 809
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -169, y: 404.5}
+        - {x: -212.5, y: 326.5}
+        - {x: -219.5, y: 254.5}
+        - {x: -275, y: 40}
+        - {x: -275, y: -126}
+        - {x: -259, y: -404}
+        - {x: 267, y: -404}
+        - {x: 275.5, y: -230.5}
+        - {x: 275.5, y: 404.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c3e4d92fbf414650800000000000000
+      internalID: 6215336643207160768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPaw_GL_Cactus_Concept_2026_3
+      rect:
+        serializedVersion: 2
+        x: 2028
+        y: 1551
+        width: 551
+        height: 582
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f502e7470d2ff98a0800000000000000
+      internalID: -6296046776919121825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPaw_GL_Cactus_Concept_2026_4
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 94
+        width: 902
+        height: 1364
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 136ab0d23192ab430800000000000000
+      internalID: 3799394397977290289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPaw_GL_Cactus_Concept_2026_6
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 110
+        width: 945
+        height: 1351
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dabb75c604789e60800000000000000
+      internalID: 7969247113063938768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPaw_GL_Cactus_Concept_2026_7
+      rect:
+        serializedVersion: 2
+        x: 2112
+        y: 139
+        width: 859
+        height: 1332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c25fa913cfd087d20800000000000000
+      internalID: 3276384105727194412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d25d7a1c6556f404e81e29ac044d94d3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PixelPaw_GL_Cactus_Concept_2026_0: 2810343065800420905
+      PixelPaw_GL_Cactus_Concept_2026_1: -4123389708363787520
+      PixelPaw_GL_Cactus_Concept_2026_2: 6215336643207160768
+      PixelPaw_GL_Cactus_Concept_2026_3: -6296046776919121825
+      PixelPaw_GL_Cactus_Concept_2026_4: 3799394397977290289
+      PixelPaw_GL_Cactus_Concept_2026_5: 3363364945432666766
+      PixelPaw_GL_Cactus_Concept_2026_6: 7969247113063938768
+      PixelPaw_GL_Cactus_Concept_2026_7: 3276384105727194412
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

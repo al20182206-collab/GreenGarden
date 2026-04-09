@@ -1,0 +1,292 @@
+fileFormatVersion: 2
+guid: 6297318d41d12f74eac3cb13ac2bc181
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1604371662270589510
+    second: PixelPaw_GL_Lavanda ciclo_Concept_2026_0
+  - first:
+      213: -4496784619957593123
+    second: PixelPaw_GL_Lavanda ciclo_Concept_2026_1
+  - first:
+      213: 6138971049674131824
+    second: PixelPaw_GL_Lavanda ciclo_Concept_2026_2
+  - first:
+      213: 8627739765458233742
+    second: PixelPaw_GL_Lavanda ciclo_Concept_2026_3
+  - first:
+      213: 8576310060567278232
+    second: PixelPaw_GL_Lavanda ciclo_Concept_2026_4
+  - first:
+      213: 6382710691069001827
+    second: PixelPaw_GL_Lavanda ciclo_Concept_2026_5
+  - first:
+      213: 8007566760577317703
+    second: PixelPaw_GL_Lavanda ciclo_Concept_2026_6
+  - first:
+      213: 5406098941478242786
+    second: PixelPaw_GL_Lavanda ciclo_Concept_2026_7
+  - first:
+      213: 8861966226758248711
+    second: PixelPaw_GL_Lavanda ciclo_Concept_2026_8
+  - first:
+      213: -2832218445596667331
+    second: PixelPaw_GL_Lavanda ciclo_Concept_2026_9
+  - first:
+      213: 4475087624719662648
+    second: PixelPaw_GL_Lavanda ciclo_Concept_2026_10
+  - first:
+      213: -1297840705362144931
+    second: PixelPaw_GL_Lavanda ciclo_Concept_2026_11
+  - first:
+      213: -4860120141265202194
+    second: PixelPaw_GL_Lavanda ciclo_Concept_2026_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PixelPaw_GL_Lavanda ciclo_Concept_2026_0
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 469
+        width: 593
+        height: 266
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab598a639702cb9e0800000000000000
+      internalID: -1604371662270589510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPaw_GL_Lavanda ciclo_Concept_2026_3
+      rect:
+        serializedVersion: 2
+        x: 953
+        y: 461
+        width: 593
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8966aeda93ebb770800000000000000
+      internalID: 8627739765458233742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPaw_GL_Lavanda ciclo_Concept_2026_5
+      rect:
+        serializedVersion: 2
+        x: 1720
+        y: 469
+        width: 593
+        height: 1023
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36081457e81f39850800000000000000
+      internalID: 6382710691069001827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPaw_GL_Lavanda ciclo_Concept_2026_7
+      rect:
+        serializedVersion: 2
+        x: 2478
+        y: 470
+        width: 593
+        height: 1010
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e90d633852560b40800000000000000
+      internalID: 5406098941478242786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPaw_GL_Lavanda ciclo_Concept_2026_9
+      rect:
+        serializedVersion: 2
+        x: 3225
+        y: 469
+        width: 593
+        height: 999
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d32d6e75450f1b8d0800000000000000
+      internalID: -2832218445596667331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b93ecc0b54468b8418ec6226ee6059ec
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PixelPaw_GL_Lavanda ciclo_Concept_2026_0: -1604371662270589510
+      PixelPaw_GL_Lavanda ciclo_Concept_2026_1: -4496784619957593123
+      PixelPaw_GL_Lavanda ciclo_Concept_2026_10: 4475087624719662648
+      PixelPaw_GL_Lavanda ciclo_Concept_2026_11: -1297840705362144931
+      PixelPaw_GL_Lavanda ciclo_Concept_2026_12: -4860120141265202194
+      PixelPaw_GL_Lavanda ciclo_Concept_2026_2: 6138971049674131824
+      PixelPaw_GL_Lavanda ciclo_Concept_2026_3: 8627739765458233742
+      PixelPaw_GL_Lavanda ciclo_Concept_2026_4: 8576310060567278232
+      PixelPaw_GL_Lavanda ciclo_Concept_2026_5: 6382710691069001827
+      PixelPaw_GL_Lavanda ciclo_Concept_2026_6: 8007566760577317703
+      PixelPaw_GL_Lavanda ciclo_Concept_2026_7: 5406098941478242786
+      PixelPaw_GL_Lavanda ciclo_Concept_2026_8: 8861966226758248711
+      PixelPaw_GL_Lavanda ciclo_Concept_2026_9: -2832218445596667331
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

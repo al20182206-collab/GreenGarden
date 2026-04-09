@@ -221,6 +221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1382835648}
   - component: {fileID: 1382835647}
+  - component: {fileID: 1382835649}
   m_Layer: 0
   m_Name: PixelPaw_GL_Pantalla 1 oficina_Concept_2026_0
   m_TagString: Untagged
@@ -277,7 +278,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 5347404627835852825, guid: 6f08d7598e45d434aba2bd539be7a886, type: 3}
+  m_Sprite: {fileID: 3883286131601097290, guid: ea082aaaa0ec33542b88e760210f94db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -296,12 +297,27 @@ Transform:
   m_GameObject: {fileID: 1382835646}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.03, y: 0, z: 0}
-  m_LocalScale: {x: 0.70832, y: 0.8203037, z: 0.70832}
+  m_LocalPosition: {x: 0.006, y: 0, z: 0}
+  m_LocalScale: {x: 0.5802997, y: 0.5269662, z: 0.5802997}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1382835649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382835646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dd1ff5c13993b84b869d33677c0deae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ControladorFondo
+  imagenDia: {fileID: 3883286131601097290, guid: ea082aaaa0ec33542b88e760210f94db, type: 3}
+  imagenAtardecer: {fileID: -3387000340814078758, guid: ebefbe1f048bef541af827395cbc9657, type: 3}
+  imagenNoche: {fileID: 9188414930420550676, guid: 22f06ff647ddac34fa296c11be6a13c3, type: 3}
 --- !u!1 &1985591149
 GameObject:
   m_ObjectHideFlags: 0

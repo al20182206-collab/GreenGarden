@@ -465,51 +465,6 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!1 &1186006395
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1186006397}
-  - component: {fileID: 1186006396}
-  m_Layer: 0
-  m_Name: _Sistema
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1186006396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1186006395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca3681148babf194bbb452409891e81e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GestorJuego
-  regadera: {fileID: 0}
---- !u!4 &1186006397
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1186006395}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.85491, y: 0.01786, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1226310928
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,6 +739,7 @@ MonoBehaviour:
   barra: {fileID: 16696797}
   armonia: 100
   spriteMuerta: {fileID: -1971269103, guid: 1504b896ad56e3746bdfe985896e0baa, type: 3}
+  armoniaInicialAlReiniciar: 100
 --- !u!1 &1419815841
 GameObject:
   m_ObjectHideFlags: 0
@@ -1097,4 +1053,3 @@ SceneRoots:
   - {fileID: 1226310931}
   - {fileID: 32294461}
   - {fileID: 1256524441}
-  - {fileID: 1186006397}

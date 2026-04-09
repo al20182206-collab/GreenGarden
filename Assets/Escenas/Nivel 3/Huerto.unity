@@ -300,6 +300,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1270761462}
   - component: {fileID: 1270761461}
+  - component: {fileID: 1270761463}
   m_Layer: 0
   m_Name: PixelPaw_GL_Pantalla 2 invernadero_Concept_2026_0
   m_TagString: Untagged
@@ -356,7 +357,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1325608100581015984, guid: 87a5ccb1401c6994f95defd08a7ec66d, type: 3}
+  m_Sprite: {fileID: -2365744731945719057, guid: 5fd01445fcb3b69428962878fbb6792f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -376,11 +377,26 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7039, y: 0.8227183, z: 0.7039}
+  m_LocalScale: {x: 0.5217986, y: 0.52606535, z: 0.5217986}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1270761463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270761460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dd1ff5c13993b84b869d33677c0deae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ControladorFondo
+  imagenDia: {fileID: -2365744731945719057, guid: 5fd01445fcb3b69428962878fbb6792f, type: 3}
+  imagenAtardecer: {fileID: -6603481861454350171, guid: f2af945ac40d1834c8cd9c2e1c8ddd20, type: 3}
+  imagenNoche: {fileID: 1549391493510740436, guid: 861b749d27c9f474db3077e02e91456e, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
