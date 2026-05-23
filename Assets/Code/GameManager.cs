@@ -19,21 +19,21 @@ public class GestorJuego : MonoBehaviour
         }
     }
     
-     public GameObject Pala;
+    public GameObject Pala;
      
-     public void AlternarPala() 
+    public void AlternarPala() 
+    {
+        if (Pala != null) 
         {
-            if (Pala != null) 
-            {
-                // Si está apagada la prende, si está prendida la apaga
-                bool estadoActual = Pala.activeSelf;
-                Pala.SetActive(!estadoActual);
+            // Si está apagada la prende, si está prendida la apaga
+            bool estadoActual = Pala.activeSelf;
+            Pala.SetActive(!estadoActual);
     
-                // Opcional: Que aparezca siempre en el centro o cerca del botón
-                if (!estadoActual) {
-                    Pala.transform.position = new Vector3(0, 0, 0); 
-                }
+            // Opcional: Que aparezca siempre en el centro o cerca del botón
+            if (!estadoActual) {
+                Pala.transform.position = new Vector3(0, 0, 0); 
             }
         }
+    }
 }
 

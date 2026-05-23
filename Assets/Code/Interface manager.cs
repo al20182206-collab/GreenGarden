@@ -82,3 +82,4 @@ void OnEnable() { SceneManager.sceneLoaded += AlCargarEscena; }
         }
     }
 }
+
