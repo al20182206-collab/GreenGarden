@@ -253,6 +253,7 @@ MonoBehaviour:
   barra: {fileID: 326523365}
   spriteMuerta: {fileID: -2832218445596667331, guid: 6297318d41d12f74eac3cb13ac2bc181, type: 3}
   sonidoAgua: {fileID: 8300000, guid: be63633635a9e564eb82aa73ce22469c, type: 3}
+  sonidoPala: {fileID: 8300000, guid: 2cd280aa74b7dd24dab5084e47b5ef5b, type: 3}
 --- !u!61 &111293643
 BoxCollider2D:
   m_ObjectHideFlags: 0
