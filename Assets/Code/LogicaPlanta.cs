@@ -6,30 +6,29 @@ public class LogicaPlantaUniversal : MonoBehaviour
 {
     [Header("Configuración de esta Planta")]
     public int indicePlanta; 
-
     public Sprite[] etapas; 
     public Slider barra;
     public Sprite spriteMuerta;
 
     private SpriteRenderer render;
     private int etapaActual = 0;
+    private int etapaAnterior = -1;
     
     [Header("Ajustes de Sonido")]
     public AudioClip sonidoAgua; 
     public AudioClip sonidoPala; 
-    private AudioSource bocinaPlanta;
+    public AudioClip sonidoEvolucion; 
+    private AudioSource bocinaPlanta; // Solo para agua (loop)
 
     private bool esperandoAnuncio = false;
 
     void Start() {
         render = GetComponent<SpriteRenderer>();
-        
         bocinaPlanta = gameObject.AddComponent<AudioSource>();
         bocinaPlanta.playOnAwake = false; 
         
         float segundos = EstadoPlanta.ObtenerTiempoTranscurrido();
         EstadoPlanta.armonias[indicePlanta] -= segundos * 1.5f;
-
         SincronizarVisual();
     }
 
@@ -41,6 +40,7 @@ public class LogicaPlantaUniversal : MonoBehaviour
             if (spriteMuerta != null) render.sprite = spriteMuerta;
             render.color = Color.gray;
             EstadoPlanta.vivas[indicePlanta] = false;
+            etapaAnterior = -1;
         } else {
             render.color = Color.white;
             EstadoPlanta.vivas[indicePlanta] = true;
@@ -54,23 +54,28 @@ public class LogicaPlantaUniversal : MonoBehaviour
         if (EstadoPlanta.vivas[indicePlanta]) {
             etapaActual = Mathf.FloorToInt(EstadoPlanta.progresos[indicePlanta] / 5f);
             etapaActual = Mathf.Clamp(etapaActual, 0, etapas.Length - 1);
+            
+            // 💥 LLAMADA GLOBAL: No depende de bocinaPlanta, así que no se cortará
+            if (etapaActual > etapaAnterior && etapaAnterior != -1)
+            {
+                if (GestorSonidos.instancia != null) 
+                    GestorSonidos.instancia.ReproducirEfecto(sonidoEvolucion);
+            }
+            etapaAnterior = etapaActual;
+
             if (etapas.Length > 0) render.sprite = etapas[etapaActual];
         }
     }
 
-    // --- LÓGICA DE RIEGO (AGUA) ---
     void OnTriggerStay2D(Collider2D otro) {
-        // 🛡️ SEGURIDAD: Si el juego está pausado (anuncio activo), la planta se vuelve intocable
         if (Time.timeScale == 0f) return;
 
         if (otro.CompareTag("Agua") && EstadoPlanta.vivas[indicePlanta]) {
-            if (!bocinaPlanta.isPlaying)
-            {
+            if (!bocinaPlanta.isPlaying) {
                 bocinaPlanta.clip = sonidoAgua;
                 bocinaPlanta.loop = true;
                 bocinaPlanta.Play();
             }
-
             EstadoPlanta.armonias[indicePlanta] += 20f * Time.deltaTime;
             EstadoPlanta.armonias[indicePlanta] = Mathf.Clamp(EstadoPlanta.armonias[indicePlanta], 0, 100);
 
@@ -82,20 +87,16 @@ public class LogicaPlantaUniversal : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D otro) {
         if (otro.CompareTag("Agua")) {
-            if (bocinaPlanta.isPlaying) {
-                bocinaPlanta.Stop();
-            }
+            if (bocinaPlanta.isPlaying) bocinaPlanta.Stop();
         }
     }
 
-    // --- LÓGICA DE LA PALA ---
     void OnTriggerEnter2D(Collider2D otro) {
-        // 🛡️ SEGURIDAD: Si el tiempo está pausado, ignoramos los choques "fantasmas" de la pala
         if (Time.timeScale == 0f) return;
 
         if (otro.CompareTag("Pala") && !EstadoPlanta.vivas[indicePlanta] && !esperandoAnuncio) {
-            
             esperandoAnuncio = true; 
+            if (GestorMusica.instancia != null) GestorMusica.instancia.PausarMusica();
 
             if (ControlAnuncio.instancia != null) {
                 ControlAnuncio.instancia.MostrarAnuncio();
@@ -107,13 +108,9 @@ public class LogicaPlantaUniversal : MonoBehaviour
     }
 
     IEnumerator EsperarAnuncioYRevivir() {
-        // 1. Esperamos un frame para que el ControlAnuncio alcance a hacer Time.timeScale = 0f
         yield return null; 
-
-        // 2. 🧠 MAGIA: En lugar de contar a ciegas, esperamos inteligentemente a que el anuncio termine y despause el juego
         yield return new WaitUntil(() => Time.timeScale > 0f); 
-
-        // 3. Una vez que el tiempo corre normal, aplicamos la vida y el sonido de golpe
+        if (GestorMusica.instancia != null) GestorMusica.instancia.ReanudarMusica();
         RevivirPlantaMecanica();
     }
 
@@ -122,20 +119,15 @@ public class LogicaPlantaUniversal : MonoBehaviour
         EstadoPlanta.progresos[indicePlanta] = 0f;
         EstadoPlanta.vivas[indicePlanta] = true;
         gameObject.tag = "Untagged";
+        etapaAnterior = -1;
         
-        etapaActual = 0;
-        if (etapas.Length > 0) {
-            render.sprite = etapas[0];
-            render.color = Color.white;
-        }
+        if (etapas.Length > 0) render.sprite = etapas[0];
+        render.color = Color.white;
 
-        // 💥 SUENA LA PALA UNA SOLA VEZ AL REVIVIR 💥
-        if (sonidoPala != null && bocinaPlanta != null) {
-            bocinaPlanta.PlayOneShot(sonidoPala);
-        }
-
+        // 💥 LLAMADA GLOBAL: El palazo ahora es independiente
+        if (GestorSonidos.instancia != null) 
+            GestorSonidos.instancia.ReproducirEfecto(sonidoPala);
+            
         esperandoAnuncio = false; 
-
-        Debug.Log("Planta " + indicePlanta + " limpiada y revivida con éxito.");
     }
 }

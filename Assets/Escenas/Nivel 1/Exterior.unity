@@ -253,6 +253,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &119631272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 119631274}
+  - component: {fileID: 119631273}
+  m_Layer: 0
+  m_Name: GestorSonidos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &119631273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119631272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a1aa093e6eacbd4fa2256a1ccb3aac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GestorSonidos
+--- !u!4 &119631274
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119631272}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.40062, y: 0.10663, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &160647839
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,6 +785,7 @@ MonoBehaviour:
   spriteMuerta: {fileID: -1971269103, guid: 1504b896ad56e3746bdfe985896e0baa, type: 3}
   sonidoAgua: {fileID: 8300000, guid: be63633635a9e564eb82aa73ce22469c, type: 3}
   sonidoPala: {fileID: 8300000, guid: 2cd280aa74b7dd24dab5084e47b5ef5b, type: 3}
+  sonidoEvolucion: {fileID: 8300000, guid: e38ff55fcd173eb4cacaeaebd2140cf8, type: 3}
 --- !u!1 &1419815841
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,3 +1115,4 @@ SceneRoots:
   - {fileID: 1226310931}
   - {fileID: 32294461}
   - {fileID: 1256524441}
+  - {fileID: 119631274}
